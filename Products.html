@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+
+    <style>
+        /* Reset some default browser styles */
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    margin-bottom: 0;
+}
+
+/* Apply a basic styling to the body */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f5f5f5;
+    margin: 0;
+
+    background-image: url('catWallpaper2.jpg');  /* Replace 'path/to/your/image.jpg' with the actual path to your image */
+    background-size: cover;  /* This ensures that the background image covers the entire viewport */
+    background-position: center;  /* This centers the background image */
+    background-repeat: no-repeat;  /* This prevents the background image from repeating */
+    
+}
+
+/* Header styles */
+header {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    padding: 15px;
+    
+}
+
+
+header nav {
+    margin-top: 10px;
+    display: inline-block;
+    margin-left: 1000px;
+}
+
+header nav ul {
+    list-style-type: none;
+    margin-left: 180px;
+}
+
+header nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+header nav ul li a {
+    color: #ecf0f1;
+    font-weight: bold;
+    font-size: medium;
+    margin: 10px;
+}
+
+
+/* Featured Products section styles */
+#featured-products {
+    padding: 20px;
+}
+
+#brief-intro{
+    padding-top: 5px;
+    margin-left: 100px;
+    color:#ecf0f1;
+    font-size: 18px;
+    width: 530px;
+}
+
+#about-us{
+    padding: 20px;
+}
+
+/* Contact section styles */
+#contact {
+    padding: 20px;
+}
+
+/* Footer styles */
+footer {
+    background-color: #34495e;
+    color: #ecf0f1;
+    padding: 35px;
+    text-align: center;
+    margin-top: 65px;
+    width: 100%;
+}
+
+#text{
+    font-family: 'DM Serif Text', serif;
+    color: #ecf0f1;
+    font-weight: bold;
+    font-size: 75px;
+    padding-left: 80px;
+    padding-top: 70px;
+}
+
+#pawhub-logo{
+    width: 90px; 
+    height: 90px;
+    border-radius: 50%; /* Make the logo circular */
+}
+
+.vertical-line {
+    border-left: 1px solid #efeaea; /* Set the color of the vertical line */
+    height: 110px; /* Set the height of the vertical line */
+    display: inline-block;
+}
+
+#brief-intro p{
+    margin-left: 25px;
+    font-family: 'DM Serif Display', serif;
+    color: #f3f0f0;
+}
+
+#about-us{
+    position:absolute;
+    margin-top: 120px;
+    background-color:rgb(255, 255, 255);
+    width: 70%;
+}
+
+#About-Us{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+    color: #e1d381;
+    text-align: center;
+}
+
+#about-us ul li a{
+    margin: 5px;
+    font-weight: bold;
+    font-size: medium;
+}
+
+#Div{
+    margin: 210px;
+}
+
+#Div section{
+    padding: 30px;
+    border-radius: 3%;
+}
+
+#wholeDiv{
+    height:1000px;
+    background-color: #f2f2f2;
+}
+
+#paws{
+    margin-top: 240px;
+    position: absolute;
+    margin-left: 700px;
+}
+
+#pawsIcon{
+    margin-top: 40px;
+    position: absolute;
+    margin-left: 52px;
+}
+
+#content{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+}
+
+#health img{
+   width: 300px;
+   height: 200px;
+   border-radius: 50%;
+   border: 1px solid #2c3e50; 
+}
+
+#health{
+    display: inline-block;
+    margin: 10px;
+}
+
+#p1, #p2, #p3 {
+    display: flex;
+}
+
+#p1 p, #p2 p, #p3 p{
+    margin-top: 80px;
+    font-size: 18px;
+    margin-left: 10px;
+}
+
+#essentials img{
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    border: 1px solid #2c3e50; 
+}
+
+#happy img{
+    width: 280px;
+    height: 200px;
+    border-radius: 50%;
+    border: 1px solid #2c3e50; 
+}
+
+#content img:hover {
+    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+    transform: rotate(10deg);
+    opacity: 0.8;
+
+  }
+
+  #content img {
+    transition: transform 0.5s ease; /* 0.5s duration, ease easing function */
+}
+
+       
+
+        .product-card {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin: 10px;
+            text-align: center;
+        }
+
+        .book-section{
+            height: 100vh;
+            width: 100%;
+            padding: 40px 0;
+            text-align: center;
+        }
+        .book-section > .container{
+            height: 400px;
+            width: 500px;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 2%;
+            margin-bottom: 30px;
+            perspective: 1200px;
+        }
+        .container > .right{
+            position: absolute;
+            height: 100%;
+            width: 50%;
+            transition: 0.7s ease-in-out;
+            transform-style: preserve-3d;
+        }
+        .book-section > .container > .right{
+            right:0;
+            transform-origin: left;
+            border-radius: 10px 0 0 10px;
+        }
+        .right > figure.front, .right > figure.back{
+            margin: 0;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            left:0;
+            top:0;
+            background-size: 200%;
+            background-repeat: no-repeat;
+            backface-visibility: hidden;
+            background-color: white;
+            overflow: hidden;
+        }
+        .right > figure.front{
+            background-position: right;
+            border-radius: 0 10px 10px 0;
+            box-shadow: 2px 2px 15px -2px rgba(0,0,0,0.2);
+        }
+        .right > figure.back{
+            background-position: left;
+            border-radius: 10px 0 0 10px;
+            box-shadow: -2px 2px 15px -2px rgba(0,0,0,0.2);
+            transform: rotateY(180deg);
+        }
+        .flip{
+            transform: rotateY(-180deg);
+        }
+        .flip::before{
+            content: "";
+            position: absolute;
+            top:0;
+            left:0;
+            z-index: 10;
+            width: 100%;
+            height: 100%;
+            border-radius: 0 10px 10px 0;
+            background-color: rgba(0,0,0,0.1);
+        }
+
+        .book-section > button{
+            border: 2px solid #ef9f00;
+            background-color: transparent;
+            color: #ef9f00;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px;
+            transition: 0.3s ease-in-out;
+        }
+        .book-section > button:focus, .book-section > button:active{
+            outline: none;
+        }
+        .book-section > p{
+            color: rgba(0,0,0,0.7);
+            font-family: calibri;
+            font-size: 24px;
+        }
+        .book-section > p > a{
+            text-decoration: none;
+        }
+        .book-section > button:hover{
+            background-color: #ef9f00;
+            color: #fff;
+        }
+        .front#cover, .back#back-cover{
+            background-color: #738cbe;
+            font-family: calibri;
+            text-align: left;
+            padding: 0 30px;
+        }
+        .front#cover h1{
+            color: #fff;
+        }
+        .front#cover p{
+            color: rgba(0,0,0,0.8);
+            font-size: 14px;
+        }
+
+        .book-section > .container {
+    height: 610px;  /* Adjust the height as needed */
+    width: 1000px;   /* Adjust the width as needed */
+    position: relative;
+    left: 32%;
+    transform: translateX(-50%);
+    border-radius: 2%;
+    margin-bottom: 30px;
+    perspective: 1200px;
+
+}
+
+table {
+    width: 80%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-left: 120px;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #3498db;
+    color: #fff;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+tr:hover {
+    background-color: #c3c3c3;
+    transition: background-color 0.3s;
+}
+
+    </style>
+
+    <script>
+        var right = document.getElementsByClassName("right");
+    var si = right.length;
+    var z=1;
+    turnRight();
+    function turnRight()
+    {
+        if(si>=1){
+            si--;
+        }
+        else{
+            si=right.length-1;
+            function sttmot(i){
+                setTimeout(function(){right[i].style.zIndex="auto";},300);
+            }
+            for(var i=0;i<right.length;i++){
+                right[i].className="right";
+                sttmot(i);
+                z=1;
+            }
+        }
+        right[si].classList.add("flip");
+        z++;
+        right[si].style.zIndex=z;
+    }
+    function turnLeft()
+    {
+        if(si<right.length){
+            si++;
+        }
+        else{
+            si=1;
+            for(var i=right.length-1;i>0;i--){
+                right[i].classList.add("flip");
+                right[i].style.zIndex=right.length+1-i;
+            }
+        }
+        right[si-1].className="right";
+        setTimeout(function(){right[si-1].style.zIndex="auto";},350);
+    }
+
+    function viewCart() {
+            alert('Added Products: ' + (myArray.length > 0 ? myArray.join(', ') : 'None'));
+        }
+
+    </script>
+    <script>
+var myArray = [];
+    function addToCart(productId, productName, productPrice) {
+        // Optionally, provide user feedback (e.g., alert or notification)
+        alert('Product added to cart: ' + productName);
+        myArray.push(productName)
+    }
+    </script>
+
+
+
+<script>
+    var myArray = [];
+
+    function addToCart(productId, productName, productPrice) {
+        var existingProduct = myArray.find(item => item.productId === productId);
+
+        if (existingProduct) {
+            existingProduct.quantity += 1;
+        } else {
+            myArray.push({
+                productId: productId,
+                productName: productName,
+                productPrice: productPrice,
+                quantity: 1
+            });
+        }
+
+        alert('Product added to cart: ' + productName);
+
+        updateCartTable();
+    }
+
+    function removeQuantityFromCart(productId) {
+        alert('Are you sure to cancel?');
+        var existingProduct = myArray.find(item => item.productId === productId);
+
+        if (existingProduct && existingProduct.quantity > 1) {
+            existingProduct.quantity -= 1;
+        } else {
+            removeFromCart(productId);
+        }
+
+        updateCartTable();
+    }
+
+    function removeFromCart(productId) {
+        myArray = myArray.filter(item => item.productId !== productId);
+
+        updateCartTable();
+    }
+
+    function updateCartTable() {
+        var cartTableBody = document.getElementById('cart-items');
+        cartTableBody.innerHTML = '';
+
+        myArray.forEach(function (item) {
+            var row = document.createElement('tr');
+            var productNameCell = document.createElement('td');
+            var productPriceCell = document.createElement('td');
+            var quantityCell = document.createElement('td');
+            var actionCell = document.createElement('td');
+            var removeBtn = document.createElement('span');
+            var removeQuantityBtn = document.createElement('span');
+
+            productNameCell.textContent = item.productName;
+            productPriceCell.textContent = item.productPrice;
+            quantityCell.textContent = item.quantity;
+
+            removeQuantityBtn.textContent = 'Remove Quantity';
+            removeQuantityBtn.className = 'remove-btn';
+            removeQuantityBtn.onclick = function () {
+                removeQuantityFromCart(item.productId);
+            };
+
+            actionCell.appendChild(removeBtn);
+            actionCell.appendChild(removeQuantityBtn);
+
+            row.appendChild(productNameCell);
+            row.appendChild(productPriceCell);
+            row.appendChild(quantityCell);
+            row.appendChild(actionCell);
+
+            cartTableBody.appendChild(row);
+        });
+    }
+</script>
+
+
+</head>
+
+<body>
+    <header>
+        <!-- Add your header content, such as a navigation menu, logo, etc. -->
+        <img src="PawHub.png" alt="Your Logo" id="pawhub-logo">
+        <nav>
+            <ul>
+                <li><a href="OnlineShopping.html">Home</a></li>
+                <li><a href="Products.html">Products</a></li>
+
+            </ul>
+            
+        </nav>
+    </header>
+
+    <div class="book-section">
+         <div class="container">
+            <div class="right">
+                 <figure class="back" id="back-cover">
+                    <h2>Product Back</h2>
+                    <p>Description of the product on the back page.</p>
+                </figure>
+                 <figure class="front" style="background-image: url(http://artisticdesigning.com/Drawings/Photoshopped/angry_man.jpg);">
+                    <h2 style="margin-top: 40px; font-weight: bold;">GiGwi Cat Toys - Eco Line Dog 'Catch & Scratch' with catnip Rattan/Wood/Plush</h2>
+                    <div id="product1">
+                    <p style="font-size: medium;">Available</p>
+                    <p style="font-size: medium;">Product code: BWIBIFC34</p>
+                    <p style="font-size: medium;">RM32.50</p>
+                    <br>
+                    <div style="margin-left: 20px; margin-right: 20px;">
+                    <p style="text-align: left;">The GiGwi Cat Toy from the Eco Line, known as 'Catch & Scratch,' is designed to engage and entertain your pet's while promoting natural behaviors like scratching and playing. Crafted with eco-friendly materials, this toy combines elements of rattan, wood, and plush to create a multi-textured and stimulating experience for your cat.</p>
+                    <p style="text-align: left;">Key Features:<br><br>
+
+                        <span style="font-weight: bold;">Catch & Scratch Design:</span>The toy is designed to encourage your cat to engage in both catching and scratching activities, promoting exercise and healthy behaviors.<br>
+                        
+                        <span style="font-weight: bold;">Multi-Textured Surfaces: </span>Different textures on the toy offer variety, keeping your cat entertained and satisfied.<br>
+                        
+                        <span style="font-weight: bold;">Natural Materials: </span > The combination of rattan, wood, and plush provides a natural and tactile feel, appealing to your cat's senses.<br>
+                    </p>
+                    </div>
+                    </div>
+                    <button type="button" class="btn btn-primary" id="shopping-cart-btn" style="margin-top: 10px;" onclick="addToCart('BWIBIFC34', 'GiGwi Cat Toys', 'RM32.50')">
+                        <span class="glyphicon glyphicon-shopping-cart"></span>
+                        Add to Cart
+                    </button>
+                </figure>
+             </div>
+             <div class="right">
+                 <figure class="back" style="background-image: url(http://artisticdesigning.com/Drawings/Photoshopped/angry_man.jpg);">
+                    <img src="product5.webp" style="width: 90%; margin-top: 100px;">
+                </figure>
+                 <figure class="front" style="background-image: url(http://artisticdesigning.com/Drawings/Photoshopped/sunset_landscape.jpg);">
+                    <h2 style="margin-top: 40px; font-weight: bold;">LISO PET CARRIER TROLLEY (GREY)</h2>
+                    <div id="product1">
+                    <p style="font-size: medium;">Available</p>
+                    <p style="font-size: medium;">Product code: BWIBIFC1705GB</p>
+                    <p style="font-size: medium;">RM498.75</p>
+                    <br>
+                    <div style="margin-left: 20px; margin-right: 20px;">
+                    <p style="text-align: left;">The LISO Pet Carrier Trolley in grey is likely designed to offer a convenient and comfortable way to transport your pet, combining the features of a pet carrier with the ease of a trolley.</p>
+                    <p style="text-align: left;">Key Features:<br><br>
+
+                        <span style="font-weight: bold;">Rolling Convenience:</span>Equipped with wheels, allowing you to roll the carrier, reducing the strain of carrying your pet for extended periods.<br>
+                        
+                        <span style="font-weight: bold;">Handle for Pulling: </span>A retractable handle for pulling the trolley, providing ease of movement in various environments.<br>
+                        
+                        <span style="font-weight: bold;">Secure Enclosure: </span > The carrier likely features a secure and well-ventilated enclosure to keep your pet safe and comfortable during travel.<br>
+                    </p>
+                    </div>
+                    </div>
+                    <button type="button" class="btn btn-primary" id="shopping-cart-btn" style="margin-top: 20px;" onclick="addToCart('BWIBIFC1705GB', 'LISO PET CARRIER TROLLEY (GREY)', 'RM498.75')">
+                        <span class="glyphicon glyphicon-shopping-cart"></span>
+                        Add to Cart
+                    </button></figure>
+             </div>
+             <div class="right">
+                 <figure class="back" style="background-image: url(http://artisticdesigning.com/Drawings/Photoshopped/sunset_landscape.jpg);">
+                    <img src="product4.jpg" style="width: 90%; margin-top: 100px;">
+                </figure>
+                 <figure class="front" style="background-image: url(http://artisticdesigning.com/Drawings/Photoshopped/intex_speakers.jpg);">
+                    <h2 style="margin-top: 40px; font-weight: bold;">PET VOYAGEUR MODEL 100 - BLUE</h2>
+                    <div id="product1">
+                    <p style="font-size: medium;">Available</p>
+                    <p style="font-size: medium;">Product code: TP50884</p>
+                    <p style="font-size: medium;">RM49.90</p>
+                    <br>
+                    <div style="margin-left: 20px; margin-right: 20px;">
+                    <p style="text-align: left;">The Pet Voyageur Model 100 is a pet carrier designed for the comfortable and secure transport of small pets, such as cats, small dogs, or other small animals. The "Blue" in the name indicates that the carrier comes in a blue color, adding a touch of style to the functionality.</p>
+                    <p style="text-align: left;">Key Features:<br><br>
+
+                        <span style="font-weight: bold;">Portable and Lightweight:</span>Designed to be easily carried, with a balance between portability and structural integrity.<br>
+                        
+                        <span style="font-weight: bold;">Appropriate Size: </span>The carrier is typically designed to meet airline and travel regulations for pet carriers.<br>
+                        
+                        <span style="font-weight: bold;">Easy to Clean: </span > This carriers have removable and washable pads or liners for easy cleaning.<br>
+                    </p>
+                    </div>
+                    </div>
+                    <button type="button" class="btn btn-primary" id="shopping-cart-btn" style="margin-top: 20px;" onclick="addToCart('TP50884', 'PET VOYAGEUR MODEL 100 - BLUE', 'RM49.90')">
+                        <span class="glyphicon glyphicon-shopping-cart"></span>
+                        Add to Cart
+                    </button>
+                </figure>
+             </div>
+             <div class="right">
+                 <figure class="back" style="background-image: url(http://artisticdesigning.com/Drawings/Photoshopped/intex_speakers.jpg);">
+                    <img src="product3.jpg" style="width: 90%; margin-top: 100px;">
+                </figure>
+                 <figure class="front" style="background-image: url(http://artisticdesigning.com/Drawings/Photoshopped/doraemon_nobita_aged.jpg);">
+                    <h2 style="margin-top: 40px; font-weight: bold;">BRIT CARE GRAIN FREE SENSITIVE HEALTHY DIGESTION 2kg</h2>
+                    <div id="product1">
+                    <p style="font-size: medium;">Available</p>
+                    <p style="font-size: medium;">Product code: BC540709</p>
+                    <p style="font-size: medium;">RM73.00</p>
+                    <br>
+                    <div style="margin-left: 20px; margin-right: 20px;">
+                    <p style="text-align: left;">BRIT Care Grain-Free Sensitive Healthy Digestion cat food is specially crafted to meet the unique nutritional needs of cats with sensitive stomachs. This premium formula is made without grains, providing a wholesome and easily digestible meal for your feline friend.</p>
+                    <p style="text-align: left;">Key Features:<br><br>
+
+                        <span style="font-weight: bold;">Grain-Free Formula:</span> Free from grains that may trigger sensitivities, making it ideal for cats with digestive issues.<br>
+                        
+                        <span style="font-weight: bold;">Optimal Digestibility:</span> Carefully selected ingredients promote healthy digestion and nutrient absorption.<br>
+                        
+                        <span style="font-weight: bold;">Balanced Nutrition:</span> A well-balanced blend of proteins, fats, vitamins, and minerals to support overall feline health.<br>
+                    </p>
+                    </div>
+                    </div>
+                    <button type="button" class="btn btn-primary" id="shopping-cart-btn"style="margin-top: 20px;"  onclick="addToCart('BC540709', 'BRIT CARE GRAIN FREE SENSITIVE HEALTHY DIGESTION 2kg', 'RM73.00')">
+                        <span class="glyphicon glyphicon-shopping-cart"></span>
+                        Add to Cart
+                    </button></figure>
+             </div>
+             <div class="right">
+                 <figure class="back" style="background-image: url(http://artisticdesigning.com/Drawings/Photoshopped/doraemon_nobita_aged.jpg);">
+                    <img src="food.jpg" style="width: 100%; margin-top: 50px;">
+                </figure>
+                 <figure class="front" style="background-image: url(http://artisticdesigning.com/Drawings/Photoshopped/narendra_modi_caricature.jpg);">
+                    <h2 style="margin-top: 40px; font-weight: bold;">BRIT CARE GRAIN FREE KITTEN 400g</h2>
+                    <div id="product1">
+                    <p style="font-size: medium;">Available</p>
+                    <p style="font-size: medium;">Product code: BC540686</p>
+                    <p style="font-size: medium;">RM21.00</p>
+                    <br>
+                    <div style="margin-left: 20px; margin-right: 20px;">
+                    <p style="text-align: left;">BRIT Care Grain-Free Kitten is a specially formulated cat food designed to meet the unique nutritional needs of growing kittens. This premium formula is crafted without grains to provide a wholesome and easily digestible diet for your young feline companion.</p>
+                    <p style="text-align: left;">Key Features:<br><br>
+
+                        <span style="font-weight: bold;">Grain-Free Formula:</span>Free from grains that may be hard for kittens to digest, making it gentle on their developing stomachs.<br>
+                        
+                        <span style="font-weight: bold;">High-Quality Proteins:</span>A balanced blend of high-quality proteins to support the energy needs of playful and growing kittens.<br>
+                        
+                    </p>
+                    </div>
+                    </div>
+                    <button type="button" class="btn btn-primary" id="shopping-cart-btn" style="margin-top: 20px;"  onclick="addToCart('BC540686', 'BRIT CARE GRAIN FREE KITTEN 400g', 'RM21.00')">
+                        <span class="glyphicon glyphicon-shopping-cart"></span>
+                        Add to Cart
+                    </button>
+                </figure>
+             </div>
+             <div class="right">
+                 <figure class="back" style="background-image: url('http://artisticdesigning.com/Drawings/Photoshopped/narendra_modi_caricature.jpg');">
+                <img src="product2.jpg" style="width: 100%; margin-top: 50px;">
+                </figure>
+                 <figure class="front" id="cover">
+                     <h1 style="font-size: 50px; font-family:Georgia, 'Times New Roman', Times, serif; margin-top: 30px;">Cat Supplies</h1>
+                     <p style="font-size: 20px;">A collection of cat supplies or a section of a store dedicated to cat products!</p>
+                 </figure>
+             </div>
+         </div>
+         <button onclick="turnLeft()">Prev</button> <button onclick="turnRight()">Next</button>
+         <br/>
+     </div>
+    
+
+     <div>
+        <div id="cart-container">
+            <h2 style="font-weight: bold; text-align: center; margin-top: 70px;">Shopping Cart</h2>
+            <table id="cart-table">
+                <thead>
+                    <tr>
+                        <th>Product Name</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Cancel</th>
+                    </tr>
+                </thead>
+                <tbody id="cart-items">
+                    <!-- Cart items will be added dynamically here -->
+                </tbody>
+            </table>
+        </div>
+     </div>
+
+    <footer>
+        <!-- Your footer content -->
+        <p>&copy; 2024 Your Company. All rights reserved.</p>
+    </footer>
+
+    <!-- Add your scripts, additional sections, or other HTML elements here -->
+
+</body>
+
+</html>

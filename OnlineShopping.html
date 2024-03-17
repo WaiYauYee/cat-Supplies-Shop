@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Shopping</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap">
+
+
+
+</head>
+
+<style>
+    /* Reset some default browser styles */
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    height: 1000px;
+    margin-bottom: 900px;
+    scroll-behavior: smooth;
+}
+
+/* Apply a basic styling to the body */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f5f5f5;
+    margin: 0;
+
+    background-image: url("catWallpaper.jpg");  /* Replace 'path/to/your/image.jpg' with the actual path to your image */
+    background-size: cover;  /* This ensures that the background image covers the entire viewport */
+    background-position: center;  /* This centers the background image */
+    background-repeat: no-repeat;  /* This prevents the background image from repeating */
+    
+}
+
+/* Header styles */
+header {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    padding: 15px;
+    
+}
+
+
+header nav {
+    margin-top: 10px;
+    display: inline-block;
+    margin-left: 1000px;
+}
+
+header nav ul {
+    list-style-type: none;
+    margin-left: 180px;
+}
+
+header nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+header nav ul li a {
+    color: #ecf0f1;
+    font-size: medium;
+    margin: 10px;
+    font-weight: bold;
+}
+
+/* Featured Products section styles */
+#featured-products {
+    padding: 20px;
+}
+
+#brief-intro{
+    padding-top: 5px;
+    margin-left: 100px;
+    color:#ecf0f1;
+    font-size: 18px;
+    width: 530px;
+}
+
+#about-us{
+    padding: 20px;
+}
+
+/* Contact section styles */
+#contact {
+    padding: 20px;
+}
+
+/* Footer styles */
+footer {
+    background-color: #34495e;
+    color: #ecf0f1;
+    padding: 35px;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+}
+
+#text{
+    font-family: 'DM Serif Text', serif;
+    color: #ecf0f1;
+    font-weight: bold;
+    font-size: 75px;
+    padding-left: 80px;
+    padding-top: 70px;
+}
+
+#pawhub-logo{
+    width: 90px; 
+    height: 90px;
+    border-radius: 50%; /* Make the logo circular */
+}
+
+.vertical-line {
+    border-left: 1px solid #efeaea; /* Set the color of the vertical line */
+    height: 110px; /* Set the height of the vertical line */
+    display: inline-block;
+}
+
+#brief-intro p{
+    margin-left: 25px;
+    font-family: 'DM Serif Display', serif;
+    color: #f3f0f0;
+}
+
+#about-us{
+    position:absolute;
+    margin-top: 100px;
+    background-color:rgb(255, 255, 255);
+    width: 70%;
+}
+
+#About-Us{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    color: #d9ca78;
+    text-align: center;
+}
+
+#about-us ul li a{
+    margin: 5px;
+    font-size: 15px;
+}
+
+#Div{
+    margin: 210px;
+}
+
+#Div section{
+    padding: 30px;
+    border-radius: 3%;
+}
+
+#wholeDiv{
+    height:1000px;
+    background-color: #f2f2f2;
+}
+
+#paws{
+    margin-top: 240px;
+    position: absolute;
+    margin-left: 700px;
+}
+
+#pawsIcon{
+    margin-top: 40px;
+    position: absolute;
+    margin-left: 52px;
+}
+
+#content{
+    font-family: 'Lora', 'Arial', sans-serif;
+    font-size: medium;
+}
+
+#health img{
+   width: 300px;
+   height: 200px;
+   border-radius: 50%;
+   border: 1px solid #2c3e50; 
+}
+
+#health{
+    display: inline-block;
+    margin: 10px;
+}
+
+#p1, #p2, #p3 {
+    display: flex;
+}
+
+#p1 p, #p2 p, #p3 p{
+    margin-top: 80px;
+    font-size: 18px;
+    margin-left: 10px;
+}
+
+#essentials img{
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    border: 1px solid #2c3e50; 
+}
+
+#happy img{
+    width: 280px;
+    height: 200px;
+    border-radius: 50%;
+    border: 1px solid #2c3e50; 
+}
+
+#content img:hover {
+    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+    transform: rotate(10deg);
+    opacity: 0.8;
+
+  }
+
+  #content img {
+    transition: transform 0.5s ease; /* 0.5s duration, ease easing function */
+}
+
+ul.nav.nav-tabs li.active a {
+    background-color: #34495e; /* Change to the color you prefer */
+    color: #e1d381; /* Change to the color you prefer */
+}
+
+ul.nav.nav-tabs li a {
+    color: #b3b3b3;
+    font-weight: bold;
+    font-size: 16px; /* Adjust the font size as needed */
+    text-transform: uppercase; /* Convert text to uppercase for a modern look */
+    
+}
+
+#AboutUs{
+    font-family: 'Merriweather', sans-serif;
+    font-size: 15px;
+    margin: 12px;
+}
+
+.review {
+        border: 1px solid #ddd;
+        padding: 15px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .review strong {
+        color: #e1d381;
+    }
+
+    .review p {
+        color: #34495e;
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    .social-icon {
+        color: #fff;
+        font-size: 36px;
+        margin-right: 20px;
+        transition: transform 0.5s ease-in-out;
+    }
+
+    .social-icon:hover {
+        transform: scale(1.2);
+    }
+
+  
+</style>
+
+<script>
+    function openCity(s) {
+  var i;
+  var x = document.getElementsByClassName("page");
+
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+
+  var selected = document.getElementById(s);
+  selected.style.display = "block";
+
+  selected.scrollIntoView({ behavior: "smooth", block: "center" });
+
+}
+
+
+</script>
+
+<body>
+    <header>
+        <!-- Add your header content, such as a navigation menu, logo, etc. -->
+        <img src="PawHub.png" alt="Your Logo" id="pawhub-logo">
+        <nav>
+            <ul>
+                <li><a href="OnlineShopping.html">Home</a></li>
+                <li><a href="Products.html">Products</a></li>
+            </ul>
+            
+        </nav>
+    </header>
+
+    <section id="featured-products">
+        <!-- Add content for featured products -->
+        <h2 id="text">Get to know <br> everything <br> about your cat!</h2>
+        <!-- Add product cards, images, and details here -->
+    </section>
+
+    <section id="brief-intro">
+        <div class="vertical-line">
+        <p>Ensure your pet is under the best care with a curated selection of high-quality cat supplies. 
+            From cozy beds to interactive toys, we provide the essentials to keep your cat happy, healthy, 
+            and entertained. </p>
+        </div>
+    </section>
+
+    <div id="paws">
+    <p id="About-Us">ABOUT US</p>
+    </div>
+    
+    <div id="pawsIcon">
+    <i id="paws" class="fa fa-paw" style="font-size:24px"></i>
+    </div>
+    
+    <div id="wholeDiv">
+    <div id="Div">
+    <section id="about-us">
+    <div>
+        
+        <ul class="nav nav-tabs">
+            <li class="active"><a href="#AboutUs" data-toggle="tab">What is PawHub?</a></li>
+            <li><a href="#Review" data-toggle="tab">Review</a></li>
+            <li><a href="#Contact" data-toggle="tab">Contact</a></li>
+        </ul>
+        <div class="tab-content">
+            <div id="AboutUs" class="tab-pane fade in active">
+                <p>Welcome to <i>PawHub</i> – Your One-Stop Shop for Premium Cat Supplies! We're dedicated to ensuring your feline friend's happiness and well-being. Explore our curated selection of cozy beds, engaging toys, health essentials, and ultimate comfort solutions. At PawHub, we believe in providing the best for your cherished cat. Join us in creating a world of joy for your four-legged family member!
+                </p>
+                <div id="content">
+                    <div id="p1">
+                        <div id="health">
+                            <img src="health.jpg">
+                        </div>
+                        <p >Prioritize your cat's health with our innovative supplies, from balanced nutrition to specialized care products.</p>
+                    </div>
+
+                    <div id="p2">
+                        <p >Playful Enrichment Essentials:
+                            Elevate playtime with our engaging toys and activities, ensuring your cat stays active, happy, and mentally stimulated.</p>
+                        <div id="essentials">
+                            <img src="essentials.jpg">
+                        </div>
+                    </div>
+                    
+                    <div id="p3">
+                        <div id="happy">
+                            <img src="happy.jpg">
+                        </div>
+                        <p >Ultimate Comfort Solutions:
+                    Indulge your cat in unparalleled comfort with our cozy beds and accessories, creating a soothing and secure space for relaxation.</p>
+                    </div>
+                </div>
+            </div>
+        
+
+            <div id="Review" class="tab-pane fade">
+                    <h2 style="font-family: 'Merriweather', sans-serif; margin: 15px;">Customer Reviews</h2>
+                
+                    <div class="review">
+                        <p><strong>Review by CatLover123:</strong></p>
+                        <p>"PawHub is a true gem for cat owners! The curated selection of products is top-notch. From the health essentials to the cozy beds, every item exudes quality. My furball absolutely loves the toys, and the customer service is pawsitively fantastic!"</p>
+                    </div>
+                
+                    <div class="review">
+                        <p><strong>Review by HappyKittyMom:</strong></p>
+                        <p>"PawHub has become my go-to destination for all things cat-related. The website is user-friendly, and the variety of products is impressive. The toys have brought so much joy to my cat's playtime, and the comfy beds are a hit. Highly recommend for cat parents seeking the best for their feline friends!"</p>
+                    </div>
+                
+                    <div class="review">
+                        <p><strong>Review by WhiskersEnthusiast:</strong></p>
+                        <p>"PawHub understands cats like no other! The health supplies are a lifesaver, and the enrichment toys keep my kitty entertained for hours. The stylish beds not only add to my home decor but also provide a cozy haven for my cat. PawHub has elevated our cat-parenting experience!"</p>
+                    </div>
+                
+                    <div class="review">
+                        <p><strong>Review by PurrfectlySatisfied:</strong></p>
+                        <p>"I can't express how satisfied I am with PawHub. The attention to detail in product curation is evident. My cat's health has improved, thanks to the premium nutrition options. The gallery section on the website showcases happy cats, and my cat is now part of that gallery, thanks to PawHub!"</p>
+                    </div>
+                
+                    <div class="review">
+                        <p><strong>Review by CatNapQueen:</strong></p>
+                        <p>"PawHub has transformed my home into a cat paradise! The essentials section has everything I need, and the happy vibes from the products are contagious. My cat's comfort is a priority, and PawHub's range of beds and accessories ensures my cat feels like royalty. Two paws up!"</p>
+                    </div>
+                </div>
+            
+            <div id="Contact" class="tab-pane fade">
+                    <!-- Contact Section -->
+<section id="contact" style="background-color: #f9f9f9; padding: 60px 0;">
+    <div class="container text-center">
+
+        <h2 style="color: #333; font-size: 36px; margin-bottom: 30px; font-family: 'Times New Roman', Times, serif; margin-right: 150px">Get in Touch</h2>
+
+        <p style="font-size: 18px; color: #555; margin-bottom: 30px; font-family: 'Times New Roman', Times, serif; margin-right: 150px" >Have questions or need assistance? Reach out to us!</p>
+
+        <!-- Add your contact form HTML here -->
+        <!-- Example: -->
+        <form action="process_form.php" method="post">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Your Name" name="name" style="font-family: 'Courier New', Courier, monospace; width: 80%" required>
+            </div>
+
+            <div class="form-group">
+                <input type="email" class="form-control" placeholder="Your Email" name="email" style="font-family: 'Courier New', Courier, monospace; width: 80%" required>
+            </div>
+
+            <div class="form-group">
+                <textarea class="form-control" placeholder="Your Message" name="message" style="font-family: 'Courier New', Courier, monospace; width: 80%" required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="margin-right: 150px">Send Message</button>
+        </form>
+    </div>
+</section>
+
+<!-- Social Media Section -->
+<section id="social-media" style="background-color: #88baee; padding: 60px 0; color: #fff;">
+    <div class="container text-center">
+        <h2 style="font-size: 36px; margin-bottom: 30px; color: #fff; text-transform: uppercase; letter-spacing: 2px; margin-right:150px">Connect with Us</h2>
+
+        <div class="social-icons" style="margin-bottom: 30px; margin-right:130px">
+            <!-- Add your social media icons with links here -->
+            <!-- Example: -->
+            <a href="https://www.facebook.com/pawhub" target="_blank" class="social-icon"><i class="fa fa-facebook"></i></a>
+            <a href="https://www.instagram.com/pawhub/" target="_blank" class="social-icon"><i class="fa fa-instagram"></i></a>
+            <a href="https://twitter.com/pawhub" target="_blank" class="social-icon"><i class="fa fa-twitter"></i></a>
+        </div>
+
+        <!-- You can add a brief statement or latest posts from your social media accounts here -->
+        <p style="font-size: 18px; margin-right:150px">Stay connected with PawHub for the latest updates, cat tips, and adorable moments!</p>
+    </div>
+</section>
+
+        </div>
+    </div>
+</section>
+
+            </div>
+        </div>
+    </div>
+        
+    </section>
+    
+</div>
+
+    <footer>
+        <!-- Add your footer content, such as links, copyright information, etc. -->
+        <p>&copy; 2024 PawHub. All rights reserved.</p>
+    </footer>
+
+    <!-- Add your scripts, additional sections, or other HTML elements here -->
+
+</body>
+
+</html>
